@@ -71,7 +71,11 @@ function Write-Menu {
     )
 
     Write-Header $Title
-    foreach ($k in ($Items.Keys | Sort-Object {[int]($_ -replace '\D','9999')}, $_)) {
+    foreach ($k in ($Items.Keys | Sort-Object `
+    @{ Expression = { [int]($_ -replace '\D', '9999') } }, `
+    @{ Expression = { $_ } }
+)) {
+
         $label = $Items[$k]
         Write-C (" [{0}] {1}" -f $k, $label) ([ConsoleColor]::Gray)
     }
