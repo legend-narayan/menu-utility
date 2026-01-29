@@ -1,7 +1,8 @@
 # Menu Utility (PowerShell)
 
 A portable, menu-driven PowerShell utility for Windows:
-System info, Winget installer, Software browser (paged), Maintenance tools
+
+System info, Winget installer, Software browser (paged), Maintenance tools.
 
 
 ## Features
